@@ -45,7 +45,7 @@ namespace hugoAuto1
             Settings.Default.output = textBox2.Text;
             Settings.Default.articles = textBox3.Text;
             Settings.Default.Save();
-            toolStripStatusLabel1.Text = "设置已保存";
+            mylog("设置已保存");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -218,11 +218,6 @@ namespace hugoAuto1
             toolStripStatusLabel1.Text = $"浏览器已启动";
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -243,6 +238,75 @@ namespace hugoAuto1
         {
             Form a = new Form2();
             a.ShowDialog();
+        }
+
+        private void btn_gitpull_Click(object sender, EventArgs e)
+        {
+            Settings.Default.gitpull_cmd =
+@"
+cd C:\Users\kasus\Documents\GitHub\cornradio.github.io
+git pull
+
+cd C:\Users\kasus\Documents\GitHub\cornBlog-bootstraptheme
+git pull
+";
+            Settings.Default.Save();
+            RunCMDCommand_no_rediect_edition(Settings.Default.gitpull_cmd.Split('\n'));
+            mylog("git pull 执行完毕");
+        }
+
+        private void mylog(string output)
+        {
+            textBox_output.Text += $"[{DateTime.Now.ToString("T")}] " + output + "\n";
+        }
+
+        public void RunCMDCommand_no_rediect_edition(params string[] command)
+        {
+            using (Process pc = new Process())
+            {
+                pc.StartInfo.FileName = "cmd.exe";
+                pc.StartInfo.CreateNoWindow = false;//隐藏窗口运行
+                pc.StartInfo.RedirectStandardError = false;//重定向错误流
+                pc.StartInfo.RedirectStandardInput = true;//重定向输入流
+                pc.StartInfo.RedirectStandardOutput = false;//重定向输出流
+                pc.StartInfo.UseShellExecute = false;
+                pc.Start();
+                int lenght = command.Length;
+                foreach (string com in command)
+                {
+                    pc.StandardInput.WriteLine(com);//输入CMD命令
+                }
+                pc.StandardInput.WriteLine("exit");//结束执行，很重要的
+                pc.StandardInput.AutoFlush = true;
+
+                pc.WaitForExit();
+                pc.Close();
+            }
+        }
+        public void RunCMDCommand(out string outPut, params string[] command)
+        {
+            using (Process pc = new Process())
+            {
+                pc.StartInfo.FileName = "cmd.exe";
+                pc.StartInfo.CreateNoWindow = true;//隐藏窗口运行
+                pc.StartInfo.RedirectStandardError = true;//重定向错误流
+                pc.StartInfo.RedirectStandardInput = true;//重定向输入流
+                pc.StartInfo.RedirectStandardOutput = true;//重定向输出流
+                pc.StartInfo.UseShellExecute = false;
+                pc.Start();
+                int lenght = command.Length;
+                foreach (string com in command)
+                {
+                    pc.StandardInput.WriteLine(com);//输入CMD命令
+                }
+                pc.StandardInput.WriteLine("exit");//结束执行，很重要的
+                pc.StandardInput.AutoFlush = true;
+
+                outPut = pc.StandardOutput.ReadToEnd();//读取结果        
+
+                pc.WaitForExit();
+                pc.Close();
+            }
         }
     }
 }
