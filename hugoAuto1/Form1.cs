@@ -188,7 +188,7 @@ namespace hugoAuto1
         {
             string mycmd =
                $@"hugo server -t {Settings.Default.hugotheme} -p 51000 -s {Settings.Default.source}";
-            RunCMDCommand_no_rediect_edition(mycmd);
+            runincmd(mycmd);
             Clipboard.SetText(mycmd);
             mylog("命令已经复制到剪切板，如果有问题就用手工方式打开吧！");
         }
@@ -278,11 +278,6 @@ namespace hugoAuto1
                 pc.WaitForExit();
                 pc.Close();
             }
-        }
-
-        private void button11_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void button_Articles_Click(object sender, EventArgs e)

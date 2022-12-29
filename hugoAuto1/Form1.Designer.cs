@@ -72,9 +72,10 @@ namespace hugoAuto1
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(8, 20);
+            this.textBox1.Location = new System.Drawing.Point(16, 40);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(526, 23);
+            this.textBox1.Size = new System.Drawing.Size(1048, 39);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
@@ -82,9 +83,10 @@ namespace hugoAuto1
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(8, 48);
+            this.textBox2.Location = new System.Drawing.Point(16, 96);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(526, 23);
+            this.textBox2.Size = new System.Drawing.Size(1048, 39);
             this.textBox2.TabIndex = 3;
             // 
             // textBox3
@@ -92,20 +94,22 @@ namespace hugoAuto1
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(8, 75);
+            this.textBox3.Location = new System.Drawing.Point(16, 150);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(526, 23);
+            this.textBox3.Size = new System.Drawing.Size(1048, 39);
             this.textBox3.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(540, 20);
+            this.button1.Location = new System.Drawing.Point(1080, 40);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 23);
+            this.button1.Size = new System.Drawing.Size(226, 46);
             this.button1.TabIndex = 6;
             this.button1.Text = "打开 源文件目录";
             this.button1.UseVisualStyleBackColor = false;
@@ -114,12 +118,13 @@ namespace hugoAuto1
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(540, 48);
+            this.button2.Location = new System.Drawing.Point(1080, 96);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 23);
+            this.button2.Size = new System.Drawing.Size(226, 46);
             this.button2.TabIndex = 7;
             this.button2.Text = "打开 已编译目录";
             this.button2.UseVisualStyleBackColor = false;
@@ -128,12 +133,13 @@ namespace hugoAuto1
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(540, 76);
+            this.button3.Location = new System.Drawing.Point(1080, 152);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 23);
+            this.button3.Size = new System.Drawing.Size(226, 46);
             this.button3.TabIndex = 8;
             this.button3.Text = "打开 文章目录";
             this.button3.UseVisualStyleBackColor = false;
@@ -142,14 +148,14 @@ namespace hugoAuto1
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(135, 51);
+            this.button4.Location = new System.Drawing.Point(270, 102);
+            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 25);
+            this.button4.Size = new System.Drawing.Size(138, 50);
             this.button4.TabIndex = 9;
             this.button4.Text = "Refreash";
             this.button4.UseVisualStyleBackColor = false;
@@ -157,13 +163,13 @@ namespace hugoAuto1
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(5, 20);
+            this.button5.Location = new System.Drawing.Point(10, 40);
+            this.button5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 23);
+            this.button5.Size = new System.Drawing.Size(168, 46);
             this.button5.TabIndex = 10;
             this.button5.Text = "Server";
             this.button5.UseVisualStyleBackColor = false;
@@ -171,13 +177,13 @@ namespace hugoAuto1
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button6.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(5, 50);
+            this.button6.Location = new System.Drawing.Point(10, 100);
+            this.button6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 23);
+            this.button6.Size = new System.Drawing.Size(168, 46);
             this.button6.TabIndex = 11;
             this.button6.Text = "Compile";
             this.button6.UseVisualStyleBackColor = false;
@@ -185,14 +191,14 @@ namespace hugoAuto1
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(8, 79);
+            this.button7.Location = new System.Drawing.Point(16, 158);
+            this.button7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button7.Name = "button7";
             this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button7.Size = new System.Drawing.Size(78, 42);
+            this.button7.Size = new System.Drawing.Size(156, 84);
             this.button7.TabIndex = 14;
             this.button7.Text = " Github Desktop";
             this.button7.UseVisualStyleBackColor = false;
@@ -200,13 +206,13 @@ namespace hugoAuto1
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(5, 51);
+            this.button8.Location = new System.Drawing.Point(10, 102);
+            this.button8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(60, 23);
+            this.button8.Size = new System.Drawing.Size(120, 46);
             this.button8.TabIndex = 15;
             this.button8.Text = "New";
             this.button8.UseVisualStyleBackColor = false;
@@ -214,13 +220,13 @@ namespace hugoAuto1
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(135, 82);
+            this.button9.Location = new System.Drawing.Point(270, 164);
+            this.button9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(67, 23);
+            this.button9.Size = new System.Drawing.Size(134, 46);
             this.button9.TabIndex = 17;
             this.button9.Text = "Typora";
             this.button9.UseVisualStyleBackColor = false;
@@ -233,21 +239,22 @@ namespace hugoAuto1
             this.comboBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox1.ForeColor = System.Drawing.Color.Navy;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 20);
+            this.comboBox1.Location = new System.Drawing.Point(10, 40);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 25);
+            this.comboBox1.Size = new System.Drawing.Size(394, 39);
             this.comboBox1.TabIndex = 18;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button10.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button10.Location = new System.Drawing.Point(5, 81);
+            this.button10.Location = new System.Drawing.Point(10, 162);
+            this.button10.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(84, 41);
+            this.button10.Size = new System.Drawing.Size(168, 82);
             this.button10.TabIndex = 19;
             this.button10.Text = "Open by Chrome";
             this.button10.UseVisualStyleBackColor = false;
@@ -256,27 +263,28 @@ namespace hugoAuto1
             // button11
             // 
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.button11.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button11.Location = new System.Drawing.Point(659, 19);
+            this.button11.Location = new System.Drawing.Point(1318, 38);
+            this.button11.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(53, 79);
+            this.button11.Size = new System.Drawing.Size(106, 158);
             this.button11.TabIndex = 20;
             this.button11.Text = "保存\r\n路径";
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click_1);
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuBar;
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(135, 112);
+            this.button12.Location = new System.Drawing.Point(270, 224);
+            this.button12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(67, 23);
+            this.button12.Size = new System.Drawing.Size(134, 46);
             this.button12.TabIndex = 21;
             this.button12.Text = "VsCode";
             this.button12.UseVisualStyleBackColor = false;
@@ -285,9 +293,10 @@ namespace hugoAuto1
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(237, 134);
+            this.linkLabel1.Location = new System.Drawing.Point(474, 268);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(83, 12);
+            this.linkLabel1.Size = new System.Drawing.Size(166, 24);
             this.linkLabel1.TabIndex = 24;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Download hugo";
@@ -296,9 +305,10 @@ namespace hugoAuto1
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(409, 134);
+            this.linkLabel2.Location = new System.Drawing.Point(818, 268);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(41, 12);
+            this.linkLabel2.Size = new System.Drawing.Size(82, 24);
             this.linkLabel2.TabIndex = 25;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Donate";
@@ -309,9 +319,10 @@ namespace hugoAuto1
             this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.linkLabel3.Location = new System.Drawing.Point(672, 134);
+            this.linkLabel3.Location = new System.Drawing.Point(1344, 268);
+            this.linkLabel3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(61, 12);
+            this.linkLabel3.Size = new System.Drawing.Size(114, 24);
             this.linkLabel3.TabIndex = 26;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Settings";
@@ -319,13 +330,13 @@ namespace hugoAuto1
             // 
             // btn_gitpull
             // 
-            this.btn_gitpull.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_gitpull.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_gitpull.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btn_gitpull.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_gitpull.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btn_gitpull.Location = new System.Drawing.Point(8, 50);
+            this.btn_gitpull.Location = new System.Drawing.Point(16, 100);
+            this.btn_gitpull.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_gitpull.Name = "btn_gitpull";
-            this.btn_gitpull.Size = new System.Drawing.Size(78, 23);
+            this.btn_gitpull.Size = new System.Drawing.Size(156, 46);
             this.btn_gitpull.TabIndex = 27;
             this.btn_gitpull.Text = " Git ↓";
             this.btn_gitpull.UseVisualStyleBackColor = false;
@@ -333,13 +344,13 @@ namespace hugoAuto1
             // 
             // btn_gitpush
             // 
-            this.btn_gitpush.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_gitpush.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_gitpush.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btn_gitpush.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_gitpush.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btn_gitpush.Location = new System.Drawing.Point(8, 20);
+            this.btn_gitpush.Location = new System.Drawing.Point(16, 40);
+            this.btn_gitpush.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_gitpush.Name = "btn_gitpush";
-            this.btn_gitpush.Size = new System.Drawing.Size(78, 23);
+            this.btn_gitpush.Size = new System.Drawing.Size(156, 46);
             this.btn_gitpush.TabIndex = 28;
             this.btn_gitpush.Text = " Git ↑";
             this.btn_gitpush.UseVisualStyleBackColor = false;
@@ -352,12 +363,12 @@ namespace hugoAuto1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_output.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBox_output.ForeColor = System.Drawing.Color.Silver;
-            this.textBox_output.Location = new System.Drawing.Point(238, 148);
-            this.textBox_output.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_output.Location = new System.Drawing.Point(476, 296);
+            this.textBox_output.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_output.Multiline = true;
             this.textBox_output.Name = "textBox_output";
             this.textBox_output.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_output.Size = new System.Drawing.Size(496, 301);
+            this.textBox_output.Size = new System.Drawing.Size(988, 598);
             this.textBox_output.TabIndex = 29;
             this.textBox_output.Text = "[console]\r\n";
             this.textBox_output.WordWrap = false;
@@ -368,11 +379,11 @@ namespace hugoAuto1
             this.groupBox1.Controls.Add(this.btn_gitpush);
             this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.btn_gitpull);
-            this.groupBox1.Location = new System.Drawing.Point(15, 134);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(30, 268);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(96, 150);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(192, 300);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Git";
@@ -382,9 +393,10 @@ namespace hugoAuto1
             this.checkBox_use_proxy_for_git.AutoSize = true;
             this.checkBox_use_proxy_for_git.Checked = true;
             this.checkBox_use_proxy_for_git.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_use_proxy_for_git.Location = new System.Drawing.Point(18, 127);
+            this.checkBox_use_proxy_for_git.Location = new System.Drawing.Point(36, 254);
+            this.checkBox_use_proxy_for_git.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.checkBox_use_proxy_for_git.Name = "checkBox_use_proxy_for_git";
-            this.checkBox_use_proxy_for_git.Size = new System.Drawing.Size(54, 16);
+            this.checkBox_use_proxy_for_git.Size = new System.Drawing.Size(102, 28);
             this.checkBox_use_proxy_for_git.TabIndex = 29;
             this.checkBox_use_proxy_for_git.Text = "proxy";
             this.checkBox_use_proxy_for_git.UseVisualStyleBackColor = true;
@@ -394,11 +406,11 @@ namespace hugoAuto1
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Location = new System.Drawing.Point(121, 134);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(242, 268);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(98, 150);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(196, 300);
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hugo";
@@ -413,11 +425,11 @@ namespace hugoAuto1
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button9);
             this.groupBox3.Controls.Add(this.button12);
-            this.groupBox3.Location = new System.Drawing.Point(15, 288);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(30, 576);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(212, 161);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(424, 322);
             this.groupBox3.TabIndex = 32;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Articles";
@@ -426,9 +438,10 @@ namespace hugoAuto1
             // 
             this.button_Articles.BackColor = System.Drawing.Color.BlueViolet;
             this.button_Articles.ForeColor = System.Drawing.Color.Bisque;
-            this.button_Articles.Location = new System.Drawing.Point(5, 80);
+            this.button_Articles.Location = new System.Drawing.Point(10, 160);
+            this.button_Articles.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button_Articles.Name = "button_Articles";
-            this.button_Articles.Size = new System.Drawing.Size(60, 53);
+            this.button_Articles.Size = new System.Drawing.Size(120, 106);
             this.button_Articles.TabIndex = 22;
             this.button_Articles.Text = "Big button";
             this.button_Articles.UseVisualStyleBackColor = false;
@@ -446,9 +459,11 @@ namespace hugoAuto1
             this.FilePath.Controls.Add(this.button11);
             this.FilePath.Controls.Add(this.button2);
             this.FilePath.Controls.Add(this.button3);
-            this.FilePath.Location = new System.Drawing.Point(15, 12);
+            this.FilePath.Location = new System.Drawing.Point(30, 24);
+            this.FilePath.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.FilePath.Name = "FilePath";
-            this.FilePath.Size = new System.Drawing.Size(718, 112);
+            this.FilePath.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FilePath.Size = new System.Drawing.Size(1436, 224);
             this.FilePath.TabIndex = 33;
             this.FilePath.TabStop = false;
             this.FilePath.Text = "FilePath";
@@ -456,9 +471,10 @@ namespace hugoAuto1
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(326, 134);
+            this.linkLabel4.Location = new System.Drawing.Point(652, 268);
+            this.linkLabel4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(77, 12);
+            this.linkLabel4.Size = new System.Drawing.Size(154, 24);
             this.linkLabel4.TabIndex = 34;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Download Git";
@@ -467,9 +483,10 @@ namespace hugoAuto1
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(456, 134);
+            this.linkLabel5.Location = new System.Drawing.Point(912, 268);
+            this.linkLabel5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(29, 12);
+            this.linkLabel5.Size = new System.Drawing.Size(58, 24);
             this.linkLabel5.TabIndex = 35;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Help";
@@ -478,9 +495,10 @@ namespace hugoAuto1
             // linkLabel6
             // 
             this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(491, 134);
+            this.linkLabel6.Location = new System.Drawing.Point(982, 268);
+            this.linkLabel6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(53, 12);
+            this.linkLabel6.Size = new System.Drawing.Size(106, 24);
             this.linkLabel6.TabIndex = 36;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Feedback";
@@ -488,9 +506,9 @@ namespace hugoAuto1
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 460);
+            this.ClientSize = new System.Drawing.Size(1490, 920);
             this.Controls.Add(this.linkLabel6);
             this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.linkLabel4);
@@ -504,6 +522,7 @@ namespace hugoAuto1
             this.Controls.Add(this.textBox_output);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
