@@ -118,7 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>以某个主题启动服务器
+    <value>这里是一些可供参考的命令！
+
+以某个主题启动服务器
 hugo server -t hugo-theme-bootstrap -p 51000 -sC:\Users\kasusa\Documents\GitHub\kasusaBlog-bootstraptheme
 
 创建一个新的文章

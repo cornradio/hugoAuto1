@@ -25,18 +25,12 @@ namespace hugoAuto1
         public Form1()
         {
             InitializeComponent();
-            getsettings();
             textBox1.Text = Settings.Default.source;
             textBox2.Text = Settings.Default.output;
             textBox3.Text = Settings.Default.articles;
         }
 
-        private void getsettings()
-        {
-            str_source = Settings.Default.source;
-            str_output = Settings.Default.output;
-            str_articles = Settings.Default.articles;
-        }
+
 
         //保存设置
         private void button11_Click(object sender, EventArgs e)
@@ -50,16 +44,6 @@ namespace hugoAuto1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                //刷新combox
-                button4.PerformClick();
-            }
-            catch
-            {
-                MessageBox.Show("需要设置目录");
-                //textBox1.Text = textBox2.Text = textBox3.Text = "";
-            }
         }
 
         private void runincmd(string yourcommand)
@@ -80,7 +64,7 @@ namespace hugoAuto1
             }
             catch (Exception)
             {
-                toolStripStatusLabel1.Text = "chrome 路径错误，请自行设置：";
+                mylog("chrome 路径错误，请自行设置");
                 Form a = new Form2();
                 a.ShowDialog();
             }
@@ -114,15 +98,15 @@ namespace hugoAuto1
             string rawpath = textBox1.Text;
             string mycmd =
               $@"hugo -d {outpath} -s {rawpath}";
-            runincmd(mycmd);
-            toolStripStatusLabel1.Text = $"hugo编译输出完毕";
+            RunCMDCommand_no_rediect_edition(mycmd);
+            mylog($"hugo编译输出完毕");
 
         }
         //开启github
         private void button7_Click(object sender, EventArgs e)
         {
             Process process = Process.Start(Settings.Default.githubCommand, "");
-            toolStripStatusLabel1.Text = $"已经命令Github启动";
+            mylog($"已经命令Github启动");
         }
         //新建文章
         private void button8_Click(object sender, EventArgs e)
@@ -133,8 +117,8 @@ namespace hugoAuto1
             if (filename!=string.Empty){
                 string mycmd =
                      $@"hugo new -s {rawpath} -c content\zh-cn posts\{filename}.md";
-                runincmd(mycmd);
-                toolStripStatusLabel1.Text = $"创建【{filename}.md】";
+                RunCMDCommand_no_rediect_edition(mycmd);
+                mylog($"创建【{filename}.md】");
             }
             else
                 comboBox1.BackColor = Color.Red;
@@ -149,11 +133,11 @@ namespace hugoAuto1
             try
             {
                 Process.Start(Settings.Default.typoraCommand.ToString(), filePath);
-                toolStripStatusLabel1.Text = $"已经命令typora打开【{filename}.md】";
+                mylog($"已经命令typora打开【{filename}.md】");
             }
             catch (Exception)
             {
-                toolStripStatusLabel1.Text = "Typora 路径错误，请自行设置：";
+                mylog("Typora 路径错误，请自行设置：");
                 Form a = new Form2();
                 a.ShowDialog();
             }
@@ -167,11 +151,11 @@ namespace hugoAuto1
             try
             {
                 Process.Start(Settings.Default.vscCommand.ToString(), filePath);
-                toolStripStatusLabel1.Text = $"已经命令vsc打开【{filename}.md】";
+                mylog($"已经命令vsc打开【{filename}.md】");
             }
             catch (Exception)
             {
-                toolStripStatusLabel1.Text = "vsc 路径错误，请自行设置：";
+                mylog("vscode 路径错误，请自行设置：");
                 Form a = new Form2();
                 a.ShowDialog();
             }
@@ -197,25 +181,22 @@ namespace hugoAuto1
                 comboBox1.Items.Add(file.ToString().Replace(pathstr, "").Replace(pathstr2, ""));
                 count++;
             }
-            toolStripStatusLabel1.Text = $"读取到了【{count}】个md文件。";
+            mylog($"读取到了{count}个md文章");
         }
         //开启server和浏览器
         private void button5_Click(object sender, EventArgs e)
         {
-            string rawpath = textBox1.Text;
-            //string mycmd =
-            //   $@"hugo server -t {Settings.Default.hugotheme} -p 51000 -s {rawpath}";
             string mycmd =
-               $@"hugo server -t {Settings.Default.hugotheme} -p 51000 -s {rawpath}";
-            runincmd(mycmd);
+               $@"hugo server -t {Settings.Default.hugotheme} -p 51000 -s {Settings.Default.source}";
+            RunCMDCommand_no_rediect_edition(mycmd);
             Clipboard.SetText(mycmd);
-            toolStripStatusLabel1.Text = "命令已经复制到剪切板，如果有问题就用手工方式打开吧！";
+            mylog("命令已经复制到剪切板，如果有问题就用手工方式打开吧！");
         }
         //本地浏览器打开博客
         private void button10_Click(object sender, EventArgs e)
         {
             openinbrowser("http://localhost:51000/hugo/");
-            toolStripStatusLabel1.Text = $"浏览器已启动";
+            mylog($"浏览器已启动");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -234,6 +215,7 @@ namespace hugoAuto1
             a.ShowDialog();
         }
 
+        
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form a = new Form2();
@@ -242,24 +224,31 @@ namespace hugoAuto1
 
         private void btn_gitpull_Click(object sender, EventArgs e)
         {
-            Settings.Default.gitpull_cmd =
-@"
-cd C:\Users\kasus\Documents\GitHub\cornradio.github.io
-git pull
-
-cd C:\Users\kasus\Documents\GitHub\cornBlog-bootstraptheme
-git pull
-";
-            Settings.Default.Save();
-            RunCMDCommand_no_rediect_edition(Settings.Default.gitpull_cmd.Split('\n'));
+            if (checkBox_use_proxy_for_git.Checked)
+            {
+                string cmd = Settings.Default.gitproxy_cmd +Environment.NewLine+ Settings.Default.gitpull_cmd;
+                RunCMDCommand_no_rediect_edition(cmd.Split('\n'));
+            }
+            else
+                RunCMDCommand_no_rediect_edition(Settings.Default.gitpull_cmd.Split('\n'));
             mylog("git pull 执行完毕");
+        }
+        private void btn_gitpush_Click(object sender, EventArgs e)
+        {
+            if (checkBox_use_proxy_for_git.Checked)
+            {
+                string cmd = Settings.Default.gitproxy_cmd + Environment.NewLine + Settings.Default.gitpush_cmd;
+                RunCMDCommand_no_rediect_edition(cmd.Split('\n'));
+            }
+            else
+                RunCMDCommand_no_rediect_edition(Settings.Default.gitpush_cmd.Split('\n'));
+            mylog("git add,git push 执行完毕");
         }
 
         private void mylog(string output)
         {
-            textBox_output.Text += $"[{DateTime.Now.ToString("T")}] " + output + "\n";
+            textBox_output.Text += $"[{DateTime.Now.ToString("T")}] " + output + Environment.NewLine;
         }
-
         public void RunCMDCommand_no_rediect_edition(params string[] command)
         {
             using (Process pc = new Process())
@@ -307,6 +296,17 @@ git pull
                 pc.WaitForExit();
                 pc.Close();
             }
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Articles_Click(object sender, EventArgs e)
+        {
+            Form a = new FormArticles();
+            a.ShowDialog();
         }
     }
 }

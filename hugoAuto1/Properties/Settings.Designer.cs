@@ -12,7 +12,7 @@ namespace hugoAuto1.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("hugo源文件的根目录(包含主题等）")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\J\\Documents\\GitHub\\cornBlog-bootstraptheme")]
         public string source {
             get {
                 return ((string)(this["source"]));
@@ -37,7 +37,7 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("要hugo编译输出到的目录位置")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\J\\Documents\\GitHub\\cornradio.github.io\\hugo")]
         public string output {
             get {
                 return ((string)(this["output"]));
@@ -49,7 +49,7 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("文章目录文件夹，根据主题不同有所区别，一般在hugo源文件夹的posts文件目录")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\J\\Documents\\GitHub\\cornBlog-bootstraptheme\\content\\zh-cn\\posts")]
         public string articles {
             get {
                 return ((string)(this["articles"]));
@@ -61,7 +61,7 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("设置win用户名来正常访问默认程序安装路径")]
+        [global::System.Configuration.DefaultSettingValueAttribute("J")]
         public string username {
             get {
                 return ((string)(this["username"]));
@@ -85,7 +85,7 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\kasusa\\AppData\\Local\\Programs\\Typora\\Typora.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\J\\AppData\\Local\\Programs\\Typora\\Typora.exe")]
         public string typoraCommand {
             get {
                 return ((string)(this["typoraCommand"]));
@@ -97,7 +97,7 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\kasusa\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\J\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")]
         public string vscCommand {
             get {
                 return ((string)(this["vscCommand"]));
@@ -109,7 +109,7 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\kasusa\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\J\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe")]
         public string githubCommand {
             get {
                 return ((string)(this["githubCommand"]));
@@ -133,7 +133,8 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("cd C:\\Users\\J\\Documents\\GitHub\\cornradio.github.io\r\ngit pull --verbose\r\n\r\ncd C:\\U" +
+            "sers\\J\\Documents\\GitHub\\cornBlog-bootstraptheme\r\ngit pull --verbose")]
         public string gitpull_cmd {
             get {
                 return ((string)(this["gitpull_cmd"]));
@@ -145,13 +146,29 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("cd C:\\Users\\J\\Documents\\GitHub\\cornradio.github.io\r\ngit add .\r\ngit commit -m \"aut" +
+            "o commit\" --verbose\r\ngit push --verbose\r\n\r\ncd C:\\Users\\J\\Documents\\GitHub\\cornBl" +
+            "og-bootstraptheme\r\ngit add .\r\ngit commit -m \"auto commit\" --verbose\r\ngit push --" +
+            "verbose")]
         public string gitpush_cmd {
             get {
                 return ((string)(this["gitpush_cmd"]));
             }
             set {
                 this["gitpush_cmd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("git config http.proxy 127.0.0.1:7890\r\ngit config https.proxy 127.0.0.1:7890\r\ngit " +
+            "config http.version HTTP/1.1")]
+        public string gitproxy_cmd {
+            get {
+                return ((string)(this["gitproxy_cmd"]));
+            }
+            set {
+                this["gitproxy_cmd"] = value;
             }
         }
     }
