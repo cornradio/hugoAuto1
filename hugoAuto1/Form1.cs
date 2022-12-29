@@ -204,24 +204,6 @@ namespace hugoAuto1
 
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            openinbrowser("https://github.com/gohugoio/hugo/releases");
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form a = new Form_commands();
-            a.ShowDialog();
-        }
-
-        
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form a = new Form2();
-            a.ShowDialog();
-        }
-
         private void btn_gitpull_Click(object sender, EventArgs e)
         {
             if (checkBox_use_proxy_for_git.Checked)
@@ -308,5 +290,46 @@ namespace hugoAuto1
             Form a = new FormArticles();
             a.ShowDialog();
         }
+
+        #region lables
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //hugo download
+            openinbrowser("https://github.com/gohugoio/hugo/releases");
+        }
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //git download
+            openinbrowser("https://git-scm.com/download");
+
+        }
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //wired command hints
+
+            Form a = new Form_commands();
+            a.ShowDialog();
+        }
+
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //settings
+            Form a = new Form2();
+            a.ShowDialog();
+        }
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //help
+            openinbrowser("https://github.com/cornradio/hugoAuto1");
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //git hub issues
+            openinbrowser("https://github.com/cornradio/hugoAuto1/issues");
+        }
+        #endregion
+
     }
 }

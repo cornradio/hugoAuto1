@@ -53,11 +53,14 @@ namespace hugoAuto1
             this.btn_gitpush = new System.Windows.Forms.Button();
             this.textBox_output = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox_use_proxy_for_git = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox_use_proxy_for_git = new System.Windows.Forms.CheckBox();
-            this.FilePath = new System.Windows.Forms.GroupBox();
             this.button_Articles = new System.Windows.Forms.Button();
+            this.FilePath = new System.Windows.Forms.GroupBox();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -104,7 +107,7 @@ namespace hugoAuto1
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 6;
-            this.button1.Text = "打开 源文件夹";
+            this.button1.Text = "打开 源文件目录";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -118,7 +121,7 @@ namespace hugoAuto1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 23);
             this.button2.TabIndex = 7;
-            this.button2.Text = "打开 文章目录";
+            this.button2.Text = "打开 已编译目录";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -261,7 +264,7 @@ namespace hugoAuto1
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(53, 79);
             this.button11.TabIndex = 20;
-            this.button11.Text = "Save path";
+            this.button11.Text = "保存\r\n路径";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
@@ -293,12 +296,12 @@ namespace hugoAuto1
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(326, 134);
+            this.linkLabel2.Location = new System.Drawing.Point(409, 134);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(35, 12);
+            this.linkLabel2.Size = new System.Drawing.Size(41, 12);
             this.linkLabel2.TabIndex = 25;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Hints";
+            this.linkLabel2.Text = "Donate";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel3
@@ -374,6 +377,18 @@ namespace hugoAuto1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Git";
             // 
+            // checkBox_use_proxy_for_git
+            // 
+            this.checkBox_use_proxy_for_git.AutoSize = true;
+            this.checkBox_use_proxy_for_git.Checked = true;
+            this.checkBox_use_proxy_for_git.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_use_proxy_for_git.Location = new System.Drawing.Point(18, 127);
+            this.checkBox_use_proxy_for_git.Name = "checkBox_use_proxy_for_git";
+            this.checkBox_use_proxy_for_git.Size = new System.Drawing.Size(54, 16);
+            this.checkBox_use_proxy_for_git.TabIndex = 29;
+            this.checkBox_use_proxy_for_git.Text = "proxy";
+            this.checkBox_use_proxy_for_git.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button5);
@@ -407,17 +422,18 @@ namespace hugoAuto1
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Articles";
             // 
-            // checkBox_use_proxy_for_git
+            // button_Articles
             // 
-            this.checkBox_use_proxy_for_git.AutoSize = true;
-            this.checkBox_use_proxy_for_git.Checked = true;
-            this.checkBox_use_proxy_for_git.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_use_proxy_for_git.Location = new System.Drawing.Point(18, 127);
-            this.checkBox_use_proxy_for_git.Name = "checkBox_use_proxy_for_git";
-            this.checkBox_use_proxy_for_git.Size = new System.Drawing.Size(54, 16);
-            this.checkBox_use_proxy_for_git.TabIndex = 29;
-            this.checkBox_use_proxy_for_git.Text = "proxy";
-            this.checkBox_use_proxy_for_git.UseVisualStyleBackColor = true;
+            this.button_Articles.BackColor = System.Drawing.Color.BlueViolet;
+            this.button_Articles.ForeColor = System.Drawing.Color.Bisque;
+            this.button_Articles.Location = new System.Drawing.Point(5, 80);
+            this.button_Articles.Name = "button_Articles";
+            this.button_Articles.Size = new System.Drawing.Size(60, 53);
+            this.button_Articles.TabIndex = 22;
+            this.button_Articles.Text = "Big button";
+            this.button_Articles.UseVisualStyleBackColor = false;
+            this.button_Articles.Visible = false;
+            this.button_Articles.Click += new System.EventHandler(this.button_Articles_Click);
             // 
             // FilePath
             // 
@@ -437,24 +453,47 @@ namespace hugoAuto1
             this.FilePath.TabStop = false;
             this.FilePath.Text = "FilePath";
             // 
-            // button_Articles
+            // linkLabel4
             // 
-            this.button_Articles.BackColor = System.Drawing.Color.BlueViolet;
-            this.button_Articles.ForeColor = System.Drawing.Color.Bisque;
-            this.button_Articles.Location = new System.Drawing.Point(5, 80);
-            this.button_Articles.Name = "button_Articles";
-            this.button_Articles.Size = new System.Drawing.Size(60, 53);
-            this.button_Articles.TabIndex = 22;
-            this.button_Articles.Text = "Big button";
-            this.button_Articles.UseVisualStyleBackColor = false;
-            this.button_Articles.Visible = false;
-            this.button_Articles.Click += new System.EventHandler(this.button_Articles_Click);
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(326, 134);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(77, 12);
+            this.linkLabel4.TabIndex = 34;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Download Git";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Location = new System.Drawing.Point(456, 134);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(29, 12);
+            this.linkLabel5.TabIndex = 35;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "Help";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Location = new System.Drawing.Point(491, 134);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(53, 12);
+            this.linkLabel6.TabIndex = 36;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "Feedback";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 460);
+            this.Controls.Add(this.linkLabel6);
+            this.Controls.Add(this.linkLabel5);
+            this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.FilePath);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -465,8 +504,6 @@ namespace hugoAuto1
             this.Controls.Add(this.textBox_output);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -512,6 +549,9 @@ namespace hugoAuto1
         private System.Windows.Forms.CheckBox checkBox_use_proxy_for_git;
         private System.Windows.Forms.GroupBox FilePath;
         private System.Windows.Forms.Button button_Articles;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel linkLabel6;
     }
 }
 
