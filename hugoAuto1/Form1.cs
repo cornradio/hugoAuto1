@@ -25,9 +25,6 @@ namespace hugoAuto1
         public Form1()
         {
             InitializeComponent();
-            textBox1.Text = Settings.Default.source;
-            textBox2.Text = Settings.Default.output;
-            textBox3.Text = Settings.Default.articles;
         }
 
 
@@ -44,6 +41,9 @@ namespace hugoAuto1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBox1.Text = Settings.Default.source;
+            textBox2.Text = Settings.Default.output;
+            textBox3.Text = Settings.Default.articles;
         }
 
         private void runincmd(string yourcommand)

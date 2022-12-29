@@ -12,7 +12,7 @@ namespace hugoAuto1.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -133,8 +133,8 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("cd C:\\Users\\J\\Documents\\GitHub\\cornradio.github.io\r\ngit pull --verbose\r\n\r\ncd C:\\U" +
-            "sers\\J\\Documents\\GitHub\\cornBlog-bootstraptheme\r\ngit pull --verbose")]
+        [global::System.Configuration.DefaultSettingValueAttribute("cd C:\\Users\\J\\Documents\\GitHub\\cornradio.github.io\r\ngit pull\r\n\r\ncd C:\\Users\\J\\Doc" +
+            "uments\\GitHub\\cornBlog-bootstraptheme\r\ngit pull")]
         public string gitpull_cmd {
             get {
                 return ((string)(this["gitpull_cmd"]));
@@ -147,9 +147,8 @@ namespace hugoAuto1.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("cd C:\\Users\\J\\Documents\\GitHub\\cornradio.github.io\r\ngit add .\r\ngit commit -m \"aut" +
-            "o commit\" --verbose\r\ngit push --verbose\r\n\r\ncd C:\\Users\\J\\Documents\\GitHub\\cornBl" +
-            "og-bootstraptheme\r\ngit add .\r\ngit commit -m \"auto commit\" --verbose\r\ngit push --" +
-            "verbose")]
+            "o commit\" --verbose\r\ngit push\r\n\r\ncd C:\\Users\\J\\Documents\\GitHub\\cornBlog-bootstr" +
+            "aptheme\r\ngit add .\r\ngit commit -m \"auto commit\" --verbose\r\ngit push")]
         public string gitpush_cmd {
             get {
                 return ((string)(this["gitpush_cmd"]));
@@ -161,8 +160,8 @@ namespace hugoAuto1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("git config http.proxy 127.0.0.1:7890\r\ngit config https.proxy 127.0.0.1:7890\r\ngit " +
-            "config http.version HTTP/1.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("set http_proxy=http://127.0.0.1:7890 & set https_proxy=http://127.0.0.1:7890\r\ngit" +
+            " config http.version HTTP/1.1")]
         public string gitproxy_cmd {
             get {
                 return ((string)(this["gitproxy_cmd"]));

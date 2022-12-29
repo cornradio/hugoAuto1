@@ -31,25 +31,24 @@
     </Setting>
     <Setting Name="gitpull_cmd" Type="System.String" Scope="User">
       <Value Profile="(Default)">cd C:\Users\J\Documents\GitHub\cornradio.github.io
-git pull --verbose
+git pull
 
 cd C:\Users\J\Documents\GitHub\cornBlog-bootstraptheme
-git pull --verbose</Value>
+git pull</Value>
     </Setting>
     <Setting Name="gitpush_cmd" Type="System.String" Scope="User">
       <Value Profile="(Default)">cd C:\Users\J\Documents\GitHub\cornradio.github.io
 git add .
 git commit -m "auto commit" --verbose
-git push --verbose
+git push
 
 cd C:\Users\J\Documents\GitHub\cornBlog-bootstraptheme
 git add .
 git commit -m "auto commit" --verbose
-git push --verbose</Value>
+git push</Value>
     </Setting>
     <Setting Name="gitproxy_cmd" Type="System.String" Scope="User">
-      <Value Profile="(Default)">git config http.proxy 127.0.0.1:7890
-git config https.proxy 127.0.0.1:7890
+      <Value Profile="(Default)">set http_proxy=http://127.0.0.1:7890 &amp; set https_proxy=http://127.0.0.1:7890
 git config http.version HTTP/1.1</Value>
     </Setting>
   </Settings>
