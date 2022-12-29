@@ -56,6 +56,12 @@ namespace hugoAuto1
         }
         private void btn_username_replace_Click(object sender, EventArgs e)
         {
+            //外面三个写一下
+            Settings.Default.articles = Settings.Default.articles.Replace(Settings.Default.username, textBox_username.Text);
+            Settings.Default.source = Settings.Default.source.Replace(Settings.Default.username, textBox_username.Text);
+            Settings.Default.output = Settings.Default.output.Replace(Settings.Default.username, textBox_username.Text);
+            Settings.Default.Save();
+
             textBox1.Text=textBox1.Text.Replace(Settings.Default.username,textBox_username.Text);
             textBox2.Text=textBox2.Text.Replace(Settings.Default.username,textBox_username.Text);
             textBox3.Text=textBox3.Text.Replace(Settings.Default.username,textBox_username.Text);
