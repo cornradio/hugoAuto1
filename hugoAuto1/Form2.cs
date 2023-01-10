@@ -56,21 +56,25 @@ namespace hugoAuto1
         }
         private void btn_username_replace_Click(object sender, EventArgs e)
         {
-            //外面三个写一下
-            Settings.Default.articles = Settings.Default.articles.Replace(Settings.Default.username, textBox_username.Text);
-            Settings.Default.source = Settings.Default.source.Replace(Settings.Default.username, textBox_username.Text);
-            Settings.Default.output = Settings.Default.output.Replace(Settings.Default.username, textBox_username.Text);
-            Settings.Default.Save();
+            DialogResult a = MessageBox.Show($"要把所有的“{Settings.Default.username}”都替换成“{textBox_username.Text}”吗？\n ", "请确认", MessageBoxButtons.YesNo);
+            if (a == DialogResult.Yes)
+            {
+                //外面三个写一下
+                Settings.Default.articles = Settings.Default.articles.Replace(Settings.Default.username, textBox_username.Text);
+                Settings.Default.source = Settings.Default.source.Replace(Settings.Default.username, textBox_username.Text);
+                Settings.Default.output = Settings.Default.output.Replace(Settings.Default.username, textBox_username.Text);
+                Settings.Default.Save();
 
-            textBox1.Text=textBox1.Text.Replace(Settings.Default.username,textBox_username.Text);
-            textBox2.Text=textBox2.Text.Replace(Settings.Default.username,textBox_username.Text);
-            textBox3.Text=textBox3.Text.Replace(Settings.Default.username,textBox_username.Text);
-            textBox4.Text=textBox4.Text.Replace(Settings.Default.username,textBox_username.Text);
-            textBox5.Text=textBox5.Text.Replace(Settings.Default.username,textBox_username.Text);
-            textBox6.Text=textBox6.Text.Replace(Settings.Default.username,textBox_username.Text);
-            textBox7.Text=textBox7.Text.Replace(Settings.Default.username,textBox_username.Text);
-            textBox8.Text=textBox8.Text.Replace(Settings.Default.username,textBox_username.Text);
-            button1.PerformClick();//save
+                textBox1.Text = textBox1.Text.Replace(Settings.Default.username, textBox_username.Text);
+                textBox2.Text = textBox2.Text.Replace(Settings.Default.username, textBox_username.Text);
+                textBox3.Text = textBox3.Text.Replace(Settings.Default.username, textBox_username.Text);
+                textBox4.Text = textBox4.Text.Replace(Settings.Default.username, textBox_username.Text);
+                textBox5.Text = textBox5.Text.Replace(Settings.Default.username, textBox_username.Text);
+                textBox6.Text = textBox6.Text.Replace(Settings.Default.username, textBox_username.Text);
+                textBox7.Text = textBox7.Text.Replace(Settings.Default.username, textBox_username.Text);
+                textBox8.Text = textBox8.Text.Replace(Settings.Default.username, textBox_username.Text);
+                button1.PerformClick();//save
+            }
         }
 
         private void button_myconfig_Click(object sender, EventArgs e)
