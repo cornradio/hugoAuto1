@@ -113,10 +113,13 @@ namespace hugoAuto1
         {
             string filename = comboBox1.Text;
             string rawpath = textBox1.Text;
+            string articles = textBox3.Text;
+
+            string postroot = articles.Replace(rawpath, "").Trim('\\');
 
             if (filename!=string.Empty){
                 string mycmd =
-                     $@"hugo new -s {rawpath} -c content\zh-cn posts\{filename}.md";
+                     $@"hugo new -s {rawpath} -c \content\zh-cn   posts\{filename}.md";
                 RunCMDCommand_no_rediect_edition(mycmd);
                 mylog($"创建【{filename}.md】");
             }
@@ -247,7 +250,7 @@ namespace hugoAuto1
                 {
                     pc.StandardInput.WriteLine(com);//输入CMD命令
                 }
-                pc.StandardInput.WriteLine("exit");//结束执行，很重要的
+                //pc.StandardInput.WriteLine("exit");//结束执行，很重要的
                 pc.StandardInput.AutoFlush = true;
 
                 pc.WaitForExit();
@@ -290,12 +293,16 @@ namespace hugoAuto1
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //hugo download
-            openinbrowser("https://github.com/gohugoio/hugo/releases");
+            //openinbrowser("https://github.com/gohugoio/hugo/releases");
+            MessageBox.Show("接下来会帮助你使用winget下载hugo，下载安装后请重启电脑");
+            RunCMDCommand_no_rediect_edition("winget install  Hugo.Hugo");
         }
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //git download
-            openinbrowser("https://git-scm.com/download");
+            //openinbrowser("https://git-scm.com/download");
+            MessageBox.Show("接下来会帮助你使用winget下载git，下载安装后请重启电脑");
+            RunCMDCommand_no_rediect_edition("winget install  Git.Git");
 
         }
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -326,5 +333,13 @@ namespace hugoAuto1
         }
         #endregion
 
+        //get a new name for post
+        private void button14_Click(object sender, EventArgs e)
+        {
+            //生成字符串，2023-02-18-python打包成exe ，换成今天的日期
+            string today = DateTime.Now.ToString("yyyy-MM-dd");
+            string newname = today + "-" + "doubleclick_here";
+            comboBox1.Text = newname;
+        }
     }
 }
