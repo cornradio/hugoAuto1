@@ -1,3 +1,6 @@
+如果你喜欢命令行的方式，可以试试这个：
+https://github.com/cornradio/hugo-commands
+
 # hugoAuto1
 使用这个辅助软件，你可以方便的新建博客、本地编译查看、修改和上传！
 
